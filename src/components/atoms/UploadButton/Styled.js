@@ -25,3 +25,10 @@ export const StyledInput = styled.input`
   height: 0;
   overflow: hidden;
 `
+
+export const StyledLabel = styled.label`
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 15px 0px;
+`

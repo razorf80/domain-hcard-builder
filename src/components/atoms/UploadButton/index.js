@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Wrapper, StyledInput} from './Styled';
+import {Wrapper, StyledInput, StyledLabel} from './Styled';
 
 const UploadButton = ({
   label,
@@ -20,7 +20,7 @@ const UploadButton = ({
         onChange={handleFileChange}
         accept="image/*"
       />
-      <label htmlFor={type}>{`+ ${label}`}</label>
+      <StyledLabel htmlFor={type}>{`+ ${label}`}</StyledLabel>
     </Wrapper>
   )
 }
