@@ -8,7 +8,7 @@ const IconText = ({
   hcardClass,
 }) => (
   <Wrapper>
-    {iconUrl && <img src={iconUrl}/>}
+    {iconUrl && <img src={iconUrl} alt={text}/>}
     <TextWrapper className={hcardClass}>{text}</TextWrapper>
   </Wrapper>
 )

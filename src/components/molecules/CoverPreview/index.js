@@ -20,10 +20,10 @@ const CoverPreview = ({
     <ImageWrapper src={coverUrl?coverUrl:cover}/>
     <MenuWrapper>
       <MenuImgWrapper>
-        <img src={notification}/>
+        <img src={notification} alt="notification"/>
       </MenuImgWrapper>
       <MenuImgWrapper>
-        <img src={menu}/>
+        <img src={menu} alt="menu"/>
       </MenuImgWrapper>
     </MenuWrapper>
     <ProfileImg src={avatarUrl?avatarUrl:avatar}/>
