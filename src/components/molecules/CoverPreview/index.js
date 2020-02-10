@@ -9,6 +9,7 @@ import {
   ImageWrapper, 
   MenuWrapper,
   ProfileImg,
+  MenuImgWrapper
 } from './Style';
 
 const CoverPreview = ({
@@ -18,8 +19,12 @@ const CoverPreview = ({
   <Wrapper>
     <ImageWrapper src={coverUrl?coverUrl:cover}/>
     <MenuWrapper>
-      <img src={notification}/>
-      <img src={menu}/>
+      <MenuImgWrapper>
+        <img src={notification}/>
+      </MenuImgWrapper>
+      <MenuImgWrapper>
+        <img src={menu}/>
+      </MenuImgWrapper>
     </MenuWrapper>
     <ProfileImg src={avatarUrl?avatarUrl:avatar}/>
   </Wrapper>
