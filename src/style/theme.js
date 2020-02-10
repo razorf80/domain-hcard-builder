@@ -15,7 +15,7 @@ const theme = {
   primaryFontFamily: 'Larsseit',
   secondaryFontFamily: 'Leckerli One',
   screen:{
-    sml: '640px',
+    sml: '800px',
   }
 }
 

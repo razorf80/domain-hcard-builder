@@ -48,7 +48,11 @@ export const ButtonWrapper = styled.div`
   align-items: center;
   
   & > div {
-    width: 45%;
+    width: 48%;
+  }
+
+  @media(max-width: ${({theme})  => theme.screen.sml}){
+    padding-bottom: 36px;
   }
 `
 
