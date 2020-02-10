@@ -19,3 +19,9 @@ export const Wrapper = styled.div`
     background-color: ${({theme}) => color(theme.colorPrimary).alpha(0.2).string()};
   }
 `
+
+export const StyledInput = styled.input`
+  width: 0;
+  height: 0;
+  overflow: hidden;
+`

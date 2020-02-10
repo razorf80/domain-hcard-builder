@@ -8,7 +8,12 @@ export const Wrapper = styled.div`
 export const DetailsWrapper = styled.div`
   width: 100%;
   padding-top: 100px;
-  padding: 62px 5%;
+  padding: 62px 10%;
+  box-sizing: border-box;
+
+  @media (max-width:${({theme}) => theme.screen.sml}) {
+    padding: 62px 6%;
+  }
 `
 
 export const NameHeading = styled.div`
@@ -26,7 +31,7 @@ export const ContactWrapper = styled.div`
 `
 
 export const AddressWrapper = styled.div`
-  padding-top: 32px;
+  padding-top: 42px;
 
   & > div{
     padding-bottom: 32px;

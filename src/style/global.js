@@ -33,12 +33,16 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${props => props.theme.primaryFontFamily};
     font-size: ${props => props.theme.fontSize};
     color: ${props => props.theme.colorPrimary};
-    height: auto;
+    height: 100%;
   }
 
   body {
     background-color: #ffffff;
     margin: 0px;
+  }
+
+  #root{
+    height: 100%;
   }
 
   h1 {

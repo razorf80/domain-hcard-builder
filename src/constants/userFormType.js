@@ -6,3 +6,5 @@ export const SUITE_NUMBER = 'suiteNumber';
 export const STREET = 'street';
 export const STATE_POSTCODE = 'statePostcode';
 export const COUNTRY = 'country';
+export const AVATAR_IMAGE = 'avatarImage';
+export const COVER_IMAGE = 'coverImage';

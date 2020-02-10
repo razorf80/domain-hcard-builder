@@ -32,6 +32,10 @@ export const ProfileImg = styled.img`
   height: 100px;
   object-fit: cover;
   position: absolute;
-  left: 5%;
+  left: 10%;
   top: 203px;
+
+  @media (max-width:${({theme}) => theme.screen.sml}) {
+    left: 6%;
+  }
 `

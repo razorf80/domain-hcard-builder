@@ -15,6 +15,8 @@ import {
   STREET,
   STATE_POSTCODE,
   COUNTRY,
+  AVATAR_IMAGE,
+  COVER_IMAGE,
 } from '../../../constants/userFormType';
 
 import {
@@ -42,9 +44,7 @@ const UserFormPreview = ({
     if(!isEmpty(address)){
       const index = address.indexOf(',');
       street.push(index === -1 ? address : address.slice(0,index));
-      console.log('HEREE', address);
       suburb = index === -1 ? '': address.slice(index + 1,address.length);
-      console.log(suburb);
     }
     return (
       <React.Fragment>
@@ -55,7 +55,10 @@ const UserFormPreview = ({
   }
   return(
     <Wrapper>
-      <CoverPreview/>
+      <CoverPreview
+        coverUrl={userData[COVER_IMAGE]}
+        avatarUrl={userData[AVATAR_IMAGE]}
+      />
       <DetailsWrapper>
         <NameHeading>
           {getName(userData[FIRST_NAME],userData[LAST_NAME])}

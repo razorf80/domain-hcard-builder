@@ -13,6 +13,8 @@ import {
   STREET,
   STATE_POSTCODE,
   COUNTRY,
+  AVATAR_IMAGE,
+  COVER_IMAGE,
 } from '../../../constants/userFormType';
 import { 
   Wrapper,
@@ -85,8 +87,16 @@ const UserForm = ({
     </FormWrapper>
     <FormWrapper>
       <ButtonWrapper>
-        <UploadButton label="Profile Picture"/>
-        <UploadButton label="Cover Picture"/>
+        <UploadButton 
+          label="Profile Picture"
+          handleChange={handleChange}
+          type={AVATAR_IMAGE}
+        />
+        <UploadButton 
+          label="Cover Picture"
+          handleChange={handleChange}
+          type={COVER_IMAGE}
+        />
       </ButtonWrapper>
       <SubmitWrapper>
         <SubmitButton label="Create Profile"/>

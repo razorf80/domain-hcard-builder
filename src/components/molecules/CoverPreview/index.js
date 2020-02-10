@@ -13,6 +13,7 @@ import {
 
 const CoverPreview = ({
   coverUrl,
+  avatarUrl,
 }) => (
   <Wrapper>
     <ImageWrapper src={coverUrl?coverUrl:cover}/>
@@ -20,12 +21,13 @@ const CoverPreview = ({
       <img src={notification}/>
       <img src={menu}/>
     </MenuWrapper>
-    <ProfileImg src={avatar}/>
+    <ProfileImg src={avatarUrl?avatarUrl:avatar}/>
   </Wrapper>
 )
 
 CoverPreview.propTypes = {
   coverUrl: PropTypes.string,
+  avatarUrl: PropTypes.string,
 }
 
 export default CoverPreview
