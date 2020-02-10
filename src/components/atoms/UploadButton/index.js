@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Wrapper, StyledInput} from './Styled';
 
 const UploadButton = ({
@@ -22,6 +23,12 @@ const UploadButton = ({
       <label htmlFor={type}>{`+ ${label}`}</label>
     </Wrapper>
   )
+}
+
+UploadButton.propTypes = {
+  label: PropTypes.string,
+  type: PropTypes.string,
+  handleChange: PropTypes.func,
 }
 
 export default UploadButton;

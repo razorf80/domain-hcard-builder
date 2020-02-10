@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import CoverPreview from '../../molecules/CoverPreview';
 import UserDetail from '../../atoms/UserDetail';
@@ -89,6 +90,10 @@ const UserFormPreview = ({
       </DetailsWrapper>
     </Wrapper>
   )
+}
+
+UserFormPreview.propTypes = {
+  userData: PropTypes.object,
 }
 
 export default UserFormPreview;
