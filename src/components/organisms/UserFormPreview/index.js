@@ -48,8 +48,8 @@ const UserFormPreview = ({
     }
     return (
       <React.Fragment>
-        <div>{street.length > 0 && `${street.join(', ')}`}</div>
-        <div>{!isEmpty(suburb) && `${suburb}`}</div>
+        <div className="street-address">{street.length > 0 && `${street.join(', ')}`}</div>
+        <div className="locality">{!isEmpty(suburb) && `${suburb}`}</div>
       </React.Fragment>
     )
   }
@@ -59,29 +59,31 @@ const UserFormPreview = ({
         coverUrl={userData[COVER_IMAGE]}
         avatarUrl={userData[AVATAR_IMAGE]}
       />
-      <DetailsWrapper>
-        <NameHeading>
+      <DetailsWrapper className="vcard">
+        <NameHeading className="fn">
           {getName(userData[FIRST_NAME],userData[LAST_NAME])}
         </NameHeading>
         <ContactWrapper>
           <IconText
             iconUrl={emailIcon}
             text={`${isEmpty(userData[EMAIL]) ? 'email address' : userData[EMAIL]}`}
+            hcardClass="email"
           />
           <IconText
             iconUrl={phoneIcon}
             text={`${isEmpty(userData[PHONE]) ? 'phone number' : userData[PHONE]}`}
+            hcardClass="tel"
           />
         </ContactWrapper>
-        <AddressWrapper>
+        <AddressWrapper className="adr">
           <UserDetail title="ADDRESS">
             {getAddress(userData[SUITE_NUMBER], userData[STREET])}
           </UserDetail>
           <UserDetail title="STATE & POSTCODE">
-            <div>{`${isEmpty(userData[STATE_POSTCODE])?'XXX 0000':userData[STATE_POSTCODE]}`}</div>
+            <div className="postal-code">{`${isEmpty(userData[STATE_POSTCODE])?'XXX 0000':userData[STATE_POSTCODE]}`}</div>
           </UserDetail>
           <UserDetail title="COUNTRY">
-            <div>{`${isEmpty(userData[COUNTRY])?'Country name':userData[COUNTRY]}`}</div>
+            <div className="country-name">{`${isEmpty(userData[COUNTRY])?'Country name':userData[COUNTRY]}`}</div>
           </UserDetail>
         </AddressWrapper>
       </DetailsWrapper>
